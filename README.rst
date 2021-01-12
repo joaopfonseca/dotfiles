@@ -1,24 +1,24 @@
 Joao Fonseca's Dot Files
 =======================
 
-These are my configs and setup a system the way I like it.
-
-TODOS
-=====
-
-* Complete install.sh
-* Install Macports if OS is Mac OS
-* Install/Update homebrew
-* Install miniconda if not installed
-* Install ultimate .vimrc
+These are my configs and setup a system the way I like it. Feel free to use as 
+you will, but be sure you know what you are modifying.
 
 Installation
 =============
 
-All you do right now is run the install.sh script in the root directory.
+```
+# change to home directory
+cd ~
 
+# clone the repo
+git clone https://github.com/joaopfonseca/dotfiles.git
 
-Guide
-=====
+# change the dotfiles' directory name
+mv dotfiles .dotfiles
 
-http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+# install vim stuff and create symlinks
+bash setup.sh
+bash make_symlinks.sh
+
+```
