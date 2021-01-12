@@ -56,7 +56,7 @@ endif
 " this allows copying vim text into the clipboard using y command 
 " install MacPorts
 " sudo -v port install vim +huge
-set clipboard=unnamedplus,unnamed,autoselect
+" set clipboard=unnamedplus,unnamed,autoselect
 
 " Latex configurations
 autocmd BufNewFile,BufRead *.tex set textwidth=100
@@ -72,3 +72,6 @@ noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 20, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 20, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 20, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 20, 4)<CR>
+
+" transparent background
+hi Normal guibg=NONE ctermbg=NONE
