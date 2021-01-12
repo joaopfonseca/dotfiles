@@ -11,6 +11,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
+Plug 'terryma/vim-smooth-scroll'
 call plug#end()
 
 " Latex stuff
@@ -66,9 +67,8 @@ autocmd BufNewFile,BufRead *.tex command Tcompile VimtexCompile
 autocmd BufNewFile,BufRead *.tex command Tstop VimtexStop
 autocmd BufNewFile,BufRead *.tex command Tclean VimtexClean
 
-" vimtexinfo: show all relevant info about current LaTeX project.
-" vimtextocopen: show table of contents window
-" vimtextoctoggle: toggle table of contents window
-" vimtexcompile: Compile the current LaTeX source file and opens the viewer after successful compilation.
-" vimtexstop: Stop compilation for the current project.
-" vimtexclean: clean auxiliary files generated in compliation process.
+" Smooth scrolling
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 20, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 20, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 20, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 20, 4)<CR>
