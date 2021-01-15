@@ -1,10 +1,13 @@
-# remove dotfiles
-rm ~/.vimrc
-rm ~/.bashrc
-rm ~/.zshrc
+DOTFILES=(
+    vimrc
+    tmux.conf
+    condarc
+    gitconfig
+    bashrc
+    zshrc
+)
 
-# create symlinks
-ln -s ~/.dotfiles/vimrc ~/.vimrc
-ln -s ~/.dotfiles/bashrc ~/.bashrc
-ln -s ~/.dotfiles/zshrc ~/.zshrc
-ln -s ~/.dotfiles/gitconfig ~/.gitconfig
+for dotfile in ${DOTFILES[@]}; do
+    test -f ~/$dotfile && rm ~/$dotfile
+    ln -s ~/.dotfiles/$dotfile ~/.$dotfile
+done
