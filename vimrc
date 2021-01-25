@@ -53,10 +53,15 @@ if &term =~ '^screen'
     execute "set <xLeft>=\e[1;*D"
 endif
 
+" Works for Mac
 " this allows copying vim text into the clipboard using y command 
 " install MacPorts
 " sudo -v port install vim +huge
-" set clipboard=unnamedplus,unnamed,autoselect
+
+" Works for Manjaro - yank to system clipboard
+" Install gvim
+
+set clipboard=unnamedplus,unnamed,autoselect
 
 " Latex configurations
 autocmd BufNewFile,BufRead *.tex set textwidth=100
