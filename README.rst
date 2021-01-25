@@ -7,18 +7,17 @@ you will, but be sure you know what you are modifying.
 Installation
 =============
 
-```
-# change to home directory
-cd ~
+.. code-block:: bash
 
-# clone the repo
-git clone https://github.com/joaopfonseca/dotfiles.git
-
-# change the dotfiles' directory name
-mv dotfiles .dotfiles
-
-# install vim stuff and create symlinks
-bash setup.sh
-bash make_symlinks.sh
-
-```
+    # change to home directory
+    cd ~
+    
+    # clone the repo
+    git clone https://github.com/joaopfonseca/dotfiles.git
+    
+    # change the dotfiles' directory name
+    mv dotfiles .dotfiles
+    
+    # install vim stuff and create symlinks
+    bash setup.sh
+    bash make_symlinks.sh
