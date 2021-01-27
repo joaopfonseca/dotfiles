@@ -58,13 +58,13 @@ endif
 " install MacPorts
 " sudo -v port install vim +huge
 
-" Works for Manjaro - yank to system clipboard
+" Works for Manjaro - copy to system clipboard
 " Install gvim
 
 set clipboard=unnamedplus,unnamed,autoselect
 
 " Latex configurations
-autocmd BufNewFile,BufRead *.tex set textwidth=80
+autocmd BufNewFile,BufRead *.tex set textwidth=78
 autocmd BufNewFile,BufRead *.tex command Tinfo VimtexInfo
 autocmd BufNewFile,BufRead *.tex command Ttocopen VimtexTocOpen
 autocmd BufNewFile,BufRead *.tex command Ttoctoggle VimtexTocToggle
