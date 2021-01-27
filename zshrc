@@ -115,7 +115,7 @@ alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 alias ll='ls -lahp'
 alias l='ls -lh'
-
+alias open='xdg-open'
 #
 # # ex - archive extractor
 # # usage: ex <file>
