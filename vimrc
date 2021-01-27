@@ -64,7 +64,7 @@ endif
 set clipboard=unnamedplus,unnamed,autoselect
 
 " Latex configurations
-autocmd BufNewFile,BufRead *.tex set textwidth=100
+autocmd BufNewFile,BufRead *.tex set textwidth=80
 autocmd BufNewFile,BufRead *.tex command Tinfo VimtexInfo
 autocmd BufNewFile,BufRead *.tex command Ttocopen VimtexTocOpen
 autocmd BufNewFile,BufRead *.tex command Ttoctoggle VimtexTocToggle
