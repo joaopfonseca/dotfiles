@@ -63,7 +63,9 @@ endif
 
 set clipboard=unnamedplus,unnamed,autoselect
 
-" Latex configurations
+" Latex and markdown configurations
+autocmd BufNewFile,BufRead *.md  set textwidth=78
+autocmd BufNewFile,BufRead *.rst set textwidth=78
 autocmd BufNewFile,BufRead *.tex set textwidth=78
 autocmd BufNewFile,BufRead *.tex command Tinfo VimtexInfo
 autocmd BufNewFile,BufRead *.tex command Ttocopen VimtexTocOpen
