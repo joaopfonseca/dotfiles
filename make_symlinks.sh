@@ -1,7 +1,7 @@
 DOTFILES=(
     vimrc
     tmux.conf
-    tmux.local.conf
+    tmux.conf.local
     condarc
     gitconfig
     bashrc
