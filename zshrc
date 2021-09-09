@@ -90,16 +90,10 @@ plugins=(git)
 # export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Use powerline
 USE_POWERLINE="true"
+
 # Source manjaro-zsh-configuration
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
   source /usr/share/zsh/manjaro-zsh-config
@@ -141,4 +135,4 @@ ex ()
   fi
 }
 
-alias gephi='MESA_LOADER_DRIVER_OVERRIDE=i965 /bin/gephi --jdkhome /usr/lib/jvm/java-8/openjdk'
+alias gephi='MESA_LOADER_DRIVER_OVERRIDE=i965 /bin/gephi --jdkhome /usr/lib/jvm/java-8-openjdk'
