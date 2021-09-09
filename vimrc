@@ -63,6 +63,9 @@ endif
 
 set clipboard=unnamedplus,unnamed,autoselect
 
+" Allow mouse interaction
+set mouse=a
+
 " Latex and markdown configurations
 autocmd BufNewFile,BufRead *.md  set textwidth=78
 autocmd BufNewFile,BufRead *.rst set textwidth=78
