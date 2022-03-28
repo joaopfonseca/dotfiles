@@ -5,7 +5,6 @@ DOTFILES=(
     condarc
     gitconfig
     bashrc
-    zshrc
 )
 
 for dotfile in ${DOTFILES[@]}; do
