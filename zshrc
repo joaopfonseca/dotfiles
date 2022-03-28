@@ -101,6 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # Use powerline
 USE_POWERLINE="true"
 
+# Allows copying to clipboard in fedora
+alias vim=vimx
+
 alias ls='ls --color=auto'
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'

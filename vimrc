@@ -58,8 +58,8 @@ endif
 " install MacPorts
 " sudo -v port install vim +huge
 
-" Works for Manjaro - copy to system clipboard
-" Install gvim
+" Works for Fedora - copy to system clipboard
+" Install vim-X11
 
 set clipboard=unnamedplus,unnamed,autoselect
 
