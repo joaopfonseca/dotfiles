@@ -158,3 +158,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
