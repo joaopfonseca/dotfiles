@@ -12,6 +12,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
 Plug 'terryma/vim-smooth-scroll'
+Plug 'dart-lang/dart-vim-plugin'
 call plug#end()
 
 " Latex stuff
