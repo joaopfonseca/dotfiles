@@ -104,7 +104,7 @@ USE_POWERLINE="true"
 # Allows copying to clipboard in fedora
 alias vim=vimx
 
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
@@ -161,4 +161,8 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
+
+# Add flutter to $PATH
+PATH="$PATH:$HOME/flutter/bin"
+
 export PATH
