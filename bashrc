@@ -117,7 +117,8 @@ shopt -s expand_aliases
 shopt -s histappend
 
 alias open='xdg-open'
-alias vim=vimx
+alias vim='gvim -v'
+alias vi='gvim -v'
 
 #
 # # ex - archive extractor
