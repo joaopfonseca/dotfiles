@@ -6,9 +6,9 @@ xclip
 
 # GUI
 libappindicator-gtk3
+gnome-extensions-app
 gnome-tweaks
 gnome-shell-extension-pop-shell
-gnome-shell-extension-gnome-extensions
 gnome-shell-extension-appindicator
 gnome-tweaks
 
