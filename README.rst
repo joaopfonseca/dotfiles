@@ -43,5 +43,5 @@ the setup scripts:
         if [[ $sftw != \#* ]]&&[[ $sftw != "" ]]; then
         sudo dnf install $sftw -y
         fi
-    done < "$HOME/.dotfiles/software_list.txt"
+    done < "$HOME/.dotfiles/requirements.txt"
     
