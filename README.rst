@@ -33,7 +33,7 @@ You can just follow the commands below.
     bash make_symlinks.sh
 
 Installing the packages in ``base_packages.txt`` beforehand is recommended.
-For the case of Fedora Workstation you can just run this just before running
+For the case of Fedora Silverblue you can just run this just before running
 the setup scripts:
 
 .. code-block:: bash
@@ -41,7 +41,10 @@ the setup scripts:
     while IFS="" read -r sftw || [ -n "$sftw" ]
     do
         if [[ $sftw != \#* ]]&&[[ $sftw != "" ]]; then
-        sudo dnf install $sftw -y
+        sudo rpm-ostree install $sftw -y
         fi
     done < "$HOME/.dotfiles/base_packages.txt"
+    
+    # Set zsh as the default shell
+    chsh -s $(which zsh)
     
