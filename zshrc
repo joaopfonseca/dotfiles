@@ -127,23 +127,6 @@ ex ()
   fi
 }
 
-# alias gephi='MESA_LOADER_DRIVER_OVERRIDE=i965 /bin/gephi --jdkhome /usr/lib/jvm/java-8-openjdk'
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/joaofonseca/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/joaofonseca/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/joaofonseca/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/joaofonseca/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -154,3 +137,19 @@ then
 fi
 
 export PATH
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/var/home/fonzie/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/var/home/fonzie/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/var/home/fonzie/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/var/home/fonzie/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

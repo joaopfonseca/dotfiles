@@ -32,7 +32,7 @@ You can just follow the commands below.
     bash setup.sh
     bash make_symlinks.sh
 
-Installing the packages in ``software_list.txt`` beforehand is recommended.
+Installing the packages in ``base_packages.txt`` beforehand is recommended.
 For the case of Fedora Workstation you can just run this just before running
 the setup scripts:
 
@@ -43,5 +43,5 @@ the setup scripts:
         if [[ $sftw != \#* ]]&&[[ $sftw != "" ]]; then
         sudo dnf install $sftw -y
         fi
-    done < "$HOME/.dotfiles/requirements.txt"
+    done < "$HOME/.dotfiles/base_packages.txt"
     

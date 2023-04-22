@@ -1,6 +1,6 @@
 PACKAGES=(
+    zsh
     make
-    tmux
     gvim
     xclip
     # texlive-scheme-full
