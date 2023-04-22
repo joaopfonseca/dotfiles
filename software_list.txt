@@ -6,12 +6,11 @@ xclip
 
 # GUI
 libappindicator-gtk3
-gnome-extensions-app
 gnome-tweaks
 gnome-shell-extension-pop-shell
-gnome-shell-extension-appindicator
-gnome-tweaks
+# gnome-extensions-app
+# gnome-shell-extension-appindicator
 
 # Proton VPN
-https://protonvpn.com/download/protonvpn-stable-release-1.0.1-1.noarch.rpm
-protonvpn
+# https://protonvpn.com/download/protonvpn-stable-release-1.0.1-1.noarch.rpm
+# protonvpn

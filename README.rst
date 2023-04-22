@@ -7,6 +7,11 @@ use it yourself, but make sure you know what you are modifying.
 These configurations are set up to work on Fedora Linux, but it will probably
 work on other distros too. Never tested on MacOS.
 
+Useful links
+------------
+
+https://github.com/iaacornus/workstation_setup/blob/main/silverblue_setup.md
+
 Installation
 =============
 
