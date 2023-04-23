@@ -29,8 +29,11 @@ You can just follow the commands below.
     mv dotfiles .dotfiles
     
     # install vim and tmux stuff and create symlinks
-    bash setup.sh
-    bash make_symlinks.sh
+    bash ~/.dotfiles/make_symlinks.sh
+    bash ~/.dotfiles/setup.sh
+    
+    # If you're running Silverblue, you can also create a toolbox and run the script below
+    bash ~/.dotfiles/setup_toolbox.sh
 
 Installing the packages in ``base_packages.txt`` beforehand is recommended.
 For the case of Fedora Silverblue you can just run this just before running
@@ -46,5 +49,5 @@ the setup scripts:
     done < "$HOME/.dotfiles/base_packages.txt"
     
     # Set zsh as the default shell
-    chsh -s $(which zsh)
+    sudo usermod --shell $(which zsh) $USER
     
