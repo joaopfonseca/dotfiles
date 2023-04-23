@@ -48,6 +48,6 @@ the setup scripts:
         fi
     done < "$HOME/.dotfiles/base_packages.txt"
     
-    # Set zsh as the default shell
+    # Set zsh as the default shell (after rebooting)
     sudo usermod --shell $(which zsh) $USER
     
