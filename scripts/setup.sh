@@ -22,6 +22,15 @@ read -p "Install zsh configurations [y/N]: " -i Y input
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+    # Download and add symbols
+    mkdir -p $HOME/.fonts/
+    curl -fLo "$HOME/.fonts/Symbols-1000-em Nerd Font Complete.ttf" \
+        https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/NerdFontsSymbolsOnly/complete/Symbols-1000-em%20Nerd%20Font%20Complete.ttf
+    curl -fLo "$HOME/.fonts/Symbols-2048-em Nerd Font Complete.ttf" \
+        https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/NerdFontsSymbolsOnly/complete/Symbols-2048-em%20Nerd%20Font%20Complete.ttf
+    fc-cache -fv
+
 else
     echo "zsh configuration cancelled."
 fi
