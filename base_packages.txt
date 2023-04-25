@@ -8,7 +8,6 @@ xclip
 libappindicator-gtk3
 gnome-tweaks
 gnome-shell-extension-pop-shell
-# gnome-extensions-app
 # gnome-shell-extension-appindicator
 
 # Proton VPN

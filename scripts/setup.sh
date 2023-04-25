@@ -12,6 +12,23 @@ else
     echo "vim configuration cancelled."
 fi
 
+# Install tmux plugin manager
+read -p "Install tmux plugin manager [y/N]: " -i Y input
+if [[ $input == "Y" || $input == "y" ]]; then
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+else
+    echo "tmux plugin manager cancelled."
+fi
+
+# Install miniconda
+read -p "Install miniconda [y/N]: " -i Y input
+if [[ $input == "Y" || $input == "y" ]]; then
+    curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o $HOME/miniconda.sh
+    sh $HOME/miniconda.sh && rm $HOME/miniconda.sh
+else
+    echo "miniconda installation cancelled."
+fi
+
 # Install zsh configurations
 read -p "Install zsh configurations [y/N]: " -i Y input
     if [[ $input == "Y" || $input == "y" ]]; then
@@ -35,19 +52,3 @@ else
     echo "zsh configuration cancelled."
 fi
 
-# Install tmux plugin manager
-read -p "Install tmux plugin manager [y/N]: " -i Y input
-if [[ $input == "Y" || $input == "y" ]]; then
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-else
-    echo "tmux plugin manager cancelled."
-fi
-
-# Install miniconda
-read -p "Install miniconda [y/N]: " -i Y input
-if [[ $input == "Y" || $input == "y" ]]; then
-    curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o $HOME/miniconda.sh
-    sh $HOME/miniconda.sh && rm $HOME/miniconda.sh
-else
-    echo "miniconda installation cancelled."
-fi

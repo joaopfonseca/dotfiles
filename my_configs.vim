@@ -36,16 +36,6 @@ let g:vimtex_compiler_latexmk = {
 set runtimepath+=~/.vim_runtime
 set nu " shows line number by default
 
-source ~/.vim_runtime/vimrcs/basic.vim
-source ~/.vim_runtime/vimrcs/filetypes.vim
-source ~/.vim_runtime/vimrcs/plugins_config.vim
-source ~/.vim_runtime/vimrcs/extended.vim
-
-try
-  source ~/.vim_runtime/my_configs.vim
-catch
-endtry
-
 if &term =~ '^screen'
     " tmux will send xterm-style keys when its xterm-keys option is on
     execute "set <xUp>=\e[1;*A"
