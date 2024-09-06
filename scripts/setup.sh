@@ -16,6 +16,14 @@ else
     echo "vim configuration cancelled."
 fi
 
+# Install tmux plugin manager
+read -p "Install tmux plugin manager [y/N]: " -i Y input
+if [[ $input == "Y" || $input == "y" ]]; then
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+else
+    echo "tmux plugin manager cancelled."
+fi
+
 # Install zsh configurations
 read -p "Install zsh configurations [y/N]: " -i Y input
     if [[ $input == "Y" || $input == "y" ]]; then
@@ -37,14 +45,6 @@ read -p "Install zsh configurations [y/N]: " -i Y input
 
 else
     echo "zsh configuration cancelled."
-fi
-
-# Install tmux plugin manager
-read -p "Install tmux plugin manager [y/N]: " -i Y input
-if [[ $input == "Y" || $input == "y" ]]; then
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-else
-    echo "tmux plugin manager cancelled."
 fi
 
 # Install miniconda
