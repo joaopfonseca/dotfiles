@@ -1,2 +1,3 @@
 auto_activate_base: true
 allow_conda_downgrades: true
+solver: libmamba

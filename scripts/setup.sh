@@ -8,6 +8,10 @@ if [[ $input == "Y" || $input == "y" ]]; then
     # Install vim plugin manager
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+    # Install GitHub Copilot for Vim
+    git clone https://github.com/github/copilot.vim.git \
+        ~/.vim/pack/github/start/copilot.vim
 else
     echo "vim configuration cancelled."
 fi

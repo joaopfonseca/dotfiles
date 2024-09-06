@@ -87,5 +87,5 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 20, 4)<CR>
 " transparent background
 " hi Normal guibg=NONE ctermbg=NONE
 
-" Show NERDTree on the left side of the screen
-let g:NERDTreeWinPos = "left"
+" Show NERDTree on the right side of the screen
+let g:NERDTreeWinPos = "right"

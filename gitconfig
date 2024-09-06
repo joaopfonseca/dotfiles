@@ -1,6 +1,6 @@
 [user]
 	name = joaopfonseca
-	email = jpmrfonseca@gmail.com
+	email = jpfonseca@novaims.unl.pt
 
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
@@ -9,7 +9,7 @@
 	clean = git-lfs clean -- %f
 
 [core]
-    editor = vim
+    editor = gvim
 
 [credential]
 	helper = store
