@@ -30,6 +30,8 @@ You can just follow the commands below.
     
     # install vim and tmux stuff and create symlinks
     bash ~/.dotfiles/make_symlinks.sh
+
+    # You might need to run this script twice
     bash ~/.dotfiles/setup.sh
     
     # If you're running Silverblue, you can also create a toolbox and run the script below
@@ -51,3 +53,10 @@ the setup scripts:
     # Set zsh as the default shell
     sudo usermod --shell $(which zsh) $USER
     
+Documentation / Checklist
+=========================
+
+- Install terminal font (Meslo Nerd): https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#fonts
+- Install MS Core Fonts: https://discussion.fedoraproject.org/t/ms-core-fonts-on-silverblue/1916/5
+- Libadwaita for GTK3 applications: https://github.com/lassekongo83/adw-gtk3
+- Jupyter Notebooks in Vim: https://github.com/luk400/vim-jukit

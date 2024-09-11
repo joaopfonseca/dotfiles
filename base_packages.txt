@@ -1,12 +1,6 @@
-# CLI
-zsh
-tmux
-gvim
-xclip
-
-# GUI
-libappindicator-gtk3
-gnome-tweaks
+gnome-shell-extension-gsconnect
 gnome-shell-extension-pop-shell
-# gnome-extensions-app
-# gnome-shell-extension-appindicator
+gnome-tweaks
+libappindicator-gtk3
+# mozilla-openh264
+zsh

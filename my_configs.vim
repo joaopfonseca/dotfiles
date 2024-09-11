@@ -10,9 +10,10 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 \| endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'lervag/vimtex'
-Plug 'terryma/vim-smooth-scroll'
-Plug 'dart-lang/dart-vim-plugin'
+Plug 'luk400/vim-jukit'          " Jupyter notebook support
+Plug 'lervag/vimtex'             " Latex support
+Plug 'terryma/vim-smooth-scroll' " Smooth scrolling with ctrl-u, ctrl-d
+Plug 'dart-lang/dart-vim-plugin' " Dart support
 call plug#end()
 
 " Latex stuff

@@ -3,6 +3,8 @@ PACKAGES=(
     make
     gvim
     xclip
+    tmux
+    nodejs
     # texlive-scheme-full
 )
 
