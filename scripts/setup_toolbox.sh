@@ -17,7 +17,8 @@ for sftw in ${PACKAGES[@]}; do
 done
 sudo dnf install $SFTW
 
+# NOTE: ONLY FOR TOOLBOX
 # Allow open files/directories outside the toolbox
 # xdg-open is also alliased to open in .zshrc
-sudo rm /usr/bin/xdg-open
-ln -s /usr/bin/flatpak-xdg-open /usr/bin/xdg-open
+# sudo rm /usr/bin/xdg-open
+# ln -s /usr/bin/flatpak-xdg-open /usr/bin/xdg-open

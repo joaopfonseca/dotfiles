@@ -58,6 +58,14 @@ you can run the following command:
 
 .. code-block:: bash
     rpm-ostree override remove noopenh264 --install mozilla-openh26
+
+To set up automatic swap file management, you can use ``systemd-swap``:
+
+.. code-block:: bash
+    sudo rpm-ostree install systemd-swap
+    sudo rpm-ostree apply-live --allow-replacement
+    sudo systemctl enable --now systemd-swap
+    ln -s ~/.dotfiles/swap.conf /etc/systemd/swap.conf.d/swap.conf
     
 Documentation / Checklist
 =========================

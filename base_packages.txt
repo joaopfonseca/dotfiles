@@ -1,6 +1,7 @@
 gnome-shell-extension-gsconnect
 gnome-shell-extension-pop-shell
 gnome-tweaks
+distrobox
 libappindicator-gtk3
 # mozilla-openh264
 zsh
