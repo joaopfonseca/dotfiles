@@ -1,3 +1,17 @@
+# Install base packages
+read -p "Install base packages (see base_packages.txt) [y/N]: " -i Y input
+if [[ $input == "Y" || $input == "y" ]]; then
+    while IFS="" read -r sftw || [ -n "$sftw" ]
+    do
+        if [[ $sftw != \#* ]]&&[[ $sftw != "" ]]; then
+        sudo rpm-ostree install $sftw -y
+        fi
+    done < "$HOME/.dotfiles/base_packages.txt"
+else
+    echo "Base packages installation cancelled."
+fi
+
+
 # Install vim configurations
 read -p "Install vim configurations [y/N]: " -i Y input
 if [[ $input == "Y" || $input == "y" ]]; then
@@ -16,6 +30,7 @@ else
     echo "vim configuration cancelled."
 fi
 
+
 # Install tmux plugin manager
 read -p "Install tmux plugin manager [y/N]: " -i Y input
 if [[ $input == "Y" || $input == "y" ]]; then
@@ -23,6 +38,7 @@ if [[ $input == "Y" || $input == "y" ]]; then
 else
     echo "tmux plugin manager cancelled."
 fi
+
 
 # Install miniconda
 read -p "Install miniconda [y/N]: " -i Y input
@@ -32,6 +48,7 @@ if [[ $input == "Y" || $input == "y" ]]; then
 else
     echo "miniconda installation cancelled."
 fi
+
 
 # Install zsh configurations
 read -p "Install zsh configurations [y/N]: " -i Y input

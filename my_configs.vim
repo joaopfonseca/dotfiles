@@ -10,10 +10,10 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 \| endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'luk400/vim-jukit'          " Jupyter notebook support
+"Plug 'luk400/vim-jukit'          " Jupyter notebook support
 Plug 'lervag/vimtex'             " Latex support
 Plug 'terryma/vim-smooth-scroll' " Smooth scrolling with ctrl-u, ctrl-d
-Plug 'dart-lang/dart-vim-plugin' " Dart support
+"Plug 'dart-lang/dart-vim-plugin' " Dart support
 call plug#end()
 
 " Latex stuff
@@ -59,9 +59,9 @@ set clipboard=unnamedplus,unnamed,autoselect
 set mouse=a
 
 " Latex and markdown configurations
-autocmd BufNewFile,BufRead *.md  set textwidth=78
-autocmd BufNewFile,BufRead *.rst set textwidth=78
-autocmd BufNewFile,BufRead *.tex set textwidth=78
+autocmd BufNewFile,BufRead *.md  set textwidth=89
+autocmd BufNewFile,BufRead *.rst set textwidth=89
+autocmd BufNewFile,BufRead *.tex set textwidth=89
 autocmd BufNewFile,BufRead *.tex command Tinfo VimtexInfo
 autocmd BufNewFile,BufRead *.tex command Ttocopen VimtexTocOpen
 autocmd BufNewFile,BufRead *.tex command Ttoctoggle VimtexTocToggle
