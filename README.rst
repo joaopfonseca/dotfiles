@@ -49,7 +49,8 @@ To install the openh264 codec (required for some video playback in Firefox),
 you can run the following command:
 
 .. code-block:: bash
-    rpm-ostree override remove noopenh264 --install mozilla-openh26
+
+    rpm-ostree override remove noopenh264 --install mozilla-openh264
 
 Documentation / Checklist
 =========================
