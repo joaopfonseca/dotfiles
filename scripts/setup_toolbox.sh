@@ -6,6 +6,7 @@ PACKAGES=(
     tmux
     nodejs
     flatpak-xdg-utils
+    gcc
     # texlive-scheme-full
 )
 
