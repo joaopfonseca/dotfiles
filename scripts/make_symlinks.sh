@@ -1,6 +1,9 @@
+# NOTE: This is a standalone script to create symlinks for dotfiles.
+#       the setup script already does this. Use this script only if 
+#       you need to recreate the symlinks.
+
 DOTFILES=(
     tmux.conf
-    tmux.conf.local
     condarc
     gitconfig
     bashrc

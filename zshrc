@@ -91,9 +91,7 @@ source $ZSH/oh-my-zsh.sh
 # Use powerline
 USE_POWERLINE="true"
 
-# Allows copying to clipboard
-alias vi='gvim -v'
-alias vim='gvim -v'
+alias vim='nvim'
 
 alias ls='ls --color=auto --group-directories-first'
 alias grep='grep --colour=auto'

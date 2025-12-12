@@ -12,6 +12,27 @@ else
 fi
 
 
+# Install neovim configurations
+read -p "Install neovim configurations [y/N]: " -i Y input
+if [[ $input == "Y" || $input == "y" ]]; then
+    rm -rf ~/.config/nvim
+    rm -rf ~/.local/state/nvim
+    rm -rf ~/.local/share/nvim
+    git clone https://github.com/NvChad/starter ~/.config/nvim
+
+    keymap_file=~/.config/nvim/lua/mappings.lua
+    test -f $keymap_file && rm $keymap_file
+    ln -s ~/.dotfiles/nvchad_mappings.lua $keymap_file
+
+    plugins_file=~/.config/nvim/lua/plugins/init.lua
+    test -f $plugins_file && rm $plugins_file
+    ln -s ~/.dotfiles/nvchad_plugins.lua $plugins_file
+
+    echo "neovim configurations installed. Please run :MasonInstallAll on nvim startup."
+else
+    echo "neovim configuration cancelled."
+fi
+
 # Install vim configurations
 read -p "Install vim configurations [y/N]: " -i Y input
 if [[ $input == "Y" || $input == "y" ]]; then
@@ -23,18 +44,24 @@ if [[ $input == "Y" || $input == "y" ]]; then
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-    # Install GitHub Copilot for Vim
-    git clone https://github.com/github/copilot.vim.git \
-        ~/.vim/pack/github/start/copilot.vim
+    # vimrc forces configs to stay separate from the vimrc file
+    test -f ~/.vim_runtime/my_configs.vim && rm ~/.vim_runtime/my_configs.vim
+    ln -s ~/.dotfiles/my_configs.vim ~/.vim_runtime/my_configs.vim
+
 else
     echo "vim configuration cancelled."
 fi
 
 
 # Install tmux plugin manager
-read -p "Install tmux plugin manager [y/N]: " -i Y input
+read -p "Set up tmux [y/N]: " -i Y input
 if [[ $input == "Y" || $input == "y" ]]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+    test -f ~/.tmux.conf && rm ~/.tmux.conf
+    ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
+
+    echo "tmux setup complete. Please press prefix + I (capital i, as in Install) inside tmux to fetch the plugins."
 else
     echo "tmux plugin manager cancelled."
 fi
@@ -52,7 +79,7 @@ fi
 
 # Install zsh configurations
 read -p "Install zsh configurations [y/N]: " -i Y input
-    if [[ $input == "Y" || $input == "y" ]]; then
+if [[ $input == "Y" || $input == "y" ]]; then
     # Install Oh-my-zsh
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
