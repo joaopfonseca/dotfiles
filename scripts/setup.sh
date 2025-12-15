@@ -28,6 +28,13 @@ if [[ $input == "Y" || $input == "y" ]]; then
     test -f $plugins_file && rm $plugins_file
     ln -s ~/.dotfiles/nvchad_plugins.lua $plugins_file
 
+    lsp_file=~/.config/nvim/lua/configs/lspconfig.lua
+    test -f $lsp_file && rm $lsp_file
+    ln -s ~/.dotfiles/nvchad_lspconfig.lua $lsp_file
+
+    npm install -g pyright
+    # pip install ruff ruff-lsp black isort
+
     echo "neovim configurations installed. Please run :MasonInstallAll on nvim startup."
 else
     echo "neovim configuration cancelled."
