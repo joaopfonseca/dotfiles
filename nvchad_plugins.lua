@@ -10,6 +10,21 @@ return {
       require "configs.lspconfig"
     end,
   },
+  -- Smooth scrolling
+  {
+    "karb94/neoscroll.nvim",
+    event = "BufRead",
+    config = function()
+      require("neoscroll").setup({
+        mappings = { "<C-u>", "<C-d>", "<C-b>", "<C-f>" },
+        duration_multiplier = 0.6,
+        hide_cursor = true,
+        stop_eof = true,
+        respect_scrolloff = true,
+        cursor_scrolls_alone = true,
+      })
+    end,
+  },
   {
     "github/copilot.vim",
     event = "InsertEnter",
