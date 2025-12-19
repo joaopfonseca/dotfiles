@@ -4,7 +4,7 @@ if [[ $input == "Y" || $input == "y" ]]; then
     while IFS="" read -r sftw || [ -n "$sftw" ]
     do
         if [[ $sftw != \#* ]]&&[[ $sftw != "" ]]; then
-        sudo rpm-ostree install $sftw -y
+        sudo dnf install $sftw -y
         fi
     done < "$HOME/.dotfiles/base_packages.txt"
 else
@@ -32,7 +32,7 @@ if [[ $input == "Y" || $input == "y" ]]; then
     test -f $lsp_file && rm $lsp_file
     ln -s ~/.dotfiles/nvchad_lspconfig.lua $lsp_file
 
-    npm install -g pyright
+    sudo npm install -g pyright
     # pip install ruff ruff-lsp black isort
 
     echo "neovim configurations installed. Please run :MasonInstallAll on nvim startup."
